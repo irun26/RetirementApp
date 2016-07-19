@@ -1,18 +1,22 @@
 //
-//  MainTabBarController.m
+//  LoginViewController.m
 //  RetirementApp
 //
-//  Created by Jimson Vedua on 7/12/16.
+//  Created by Jimson Vedua on 7/13/16.
 //  Copyright © 2016 Detroit Labs. All rights reserved.
 //
 
-#import "MainTabBarController.h"
+#import "LoginViewController.h"
+#import "User.h"
 
-@interface MainTabBarController ()
+
+@interface LoginViewController ()
 
 @end
 
-@implementation MainTabBarController
+@implementation LoginViewController
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,4 +38,7 @@
 }
 */
 
+- (IBAction)goButton:(id)sender {
+    NSLog(@"Go Button Pressed");
+}
 @end

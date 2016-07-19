@@ -10,4 +10,35 @@
 
 @interface SecondViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *incomeLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *mainIncombeLabel;
+
+@property (weak, nonatomic) IBOutlet UITextField *mainIncomeTextfield;
+
+
+
+@property (weak, nonatomic) IBOutlet UILabel *spouseIncomeLabel;
+
+@property (weak, nonatomic) IBOutlet UITextField *spouseIncomeTextfield;
+
+
+
+@property (weak, nonatomic) IBOutlet UILabel *otherIncomeLabel;
+
+@property (weak, nonatomic) IBOutlet UITextField *otherIncomeTextfield;
+
+
+
+@property (weak, nonatomic) IBOutlet UILabel *totalIncomeLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *dollarTotalIncomeLabel;
+
+
+
+
+
+
+
+
 @end

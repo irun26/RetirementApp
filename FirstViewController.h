@@ -10,4 +10,23 @@
 
 @interface FirstViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *expensesLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *mortgageLabel;
+@property (weak, nonatomic) IBOutlet UITextField *mortgageTextfield;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *carLabel;
+@property (weak, nonatomic) IBOutlet UITextField *carTextfield;
+
+@property (weak, nonatomic) IBOutlet UILabel *foodLabel;
+@property (weak, nonatomic) IBOutlet UITextField *foodTextfield;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *expensesTotalLabel;
+@property (weak, nonatomic) IBOutlet UITextField *dollarTotalExpensesLabel;
+
+
+
+
 @end

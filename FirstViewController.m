@@ -7,12 +7,24 @@
 //
 
 #import "FirstViewController.h"
+#import "ThirdViewController.h"
+#import "Expenses.h"
+
+
+
+
 
 @interface FirstViewController ()
 
+
 @end
 
+Expenses *expense;
+
+
+
 @implementation FirstViewController
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -34,4 +46,26 @@
 }
 */
 
+
+- (IBAction)submitButton:(id)sender {
+    expense = [[Expenses alloc] init];
+    
+    expense.mortgage = [_mortgageTextfield.text floatValue];
+    expense.car = [_carTextfield.text floatValue];
+    expense.food = [_foodTextfield.text floatValue];
+
+    expense.totalExpenses = expense.mortgage + expense.car + expense.food;
+    
+    NSString *str = [NSString stringWithFormat:@"%.2f", expense.totalExpenses];
+    
+    _dollarTotalExpensesLabel.text = str;
+    
+    NSLog(@"Mortgage = $%.2f", expense.mortgage);
+    NSLog(@"Car = $%.2f", expense.car);
+    NSLog(@"Food = $%.2f", expense.food);
+    NSLog(@"Total Expenses = $%.2f", expense.totalExpenses);
+    
+//    NSLog (@"Expense Submit Button Pressed");
+    
+}
 @end

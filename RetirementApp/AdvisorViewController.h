@@ -10,4 +10,10 @@
 
 @interface AdvisorViewController : UIViewController
 
+@property (weak, nonatomic) IBOutlet UILabel *financialAdvisorLabel;
+@property (weak, nonatomic) IBOutlet UILabel *nameAddressLabel;
+
+@property (weak, nonatomic) IBOutlet UILabel *phoneNumberLabel;
+@property (weak, nonatomic) IBOutlet UILabel *mapHereLabel;
+
 @end
