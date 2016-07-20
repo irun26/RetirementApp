@@ -8,7 +8,9 @@
 
 #import <UIKit/UIKit.h>
 
-@interface ThirdViewController : UIViewController
+
+
+@interface ThirdViewController : UIViewController <UITextFieldDelegate>
 
 @property (weak, nonatomic) IBOutlet UILabel *estimatedRetirementYearLabel;
 @property (weak, nonatomic) IBOutlet UITextField *retirementYearTextfield;
@@ -31,8 +33,12 @@
 @property (weak, nonatomic) IBOutlet UITextField *interestRateTextfield;
 
 
-@property (weak, nonatomic) IBOutlet UILabel *totalMoneyRequiredInRetirementLabel;
-@property (weak, nonatomic) IBOutlet UITextField *amountMoneyRequired;
+
+@property (weak, nonatomic) IBOutlet UILabel *estimatedRetirementMoneyLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dollarEstimatedRetirementMoneyLabel;
+
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
 
 
 @end

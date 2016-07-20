@@ -38,6 +38,14 @@ Income *income;
 }
 */
 
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    for (UIView * txt in self.view.subviews){
+        if ([txt isKindOfClass:[UITextField class]] && [txt isFirstResponder]) {
+            [txt resignFirstResponder];
+        }
+    }
+}
+
 
 - (IBAction)submitButton:(id)sender {
     income = [[Income alloc] init];
@@ -48,7 +56,7 @@ Income *income;
     
     income.totalIncome = income.mainIncome + income.spouseIncome + income.otherIncome;
     
-    NSString *str = [NSString stringWithFormat:@"%.2f", income.totalIncome];
+    NSString *str = [NSString stringWithFormat:@"$ %.2f", income.totalIncome];
     
     _dollarTotalIncomeLabel.text = str;
     

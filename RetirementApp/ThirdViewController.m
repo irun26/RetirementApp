@@ -21,7 +21,7 @@ User *user;
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    
     // Do any additional setup after loading the view.
 }
 
@@ -41,6 +41,16 @@ User *user;
 */
 
 
+
+- (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+    for (UIView * txt in self.view.subviews){
+        if ([txt isKindOfClass:[UITextField class]] && [txt isFirstResponder]) {
+            [txt resignFirstResponder];
+        }
+    }
+}
+
+
 - (IBAction)enterExpensesButton:(id)sender {
 }
 
@@ -54,8 +64,10 @@ User *user;
     user.yearOfRetirement = [_retirementYearTextfield.text intValue];
     user.totalSavings = [_amountTotalSavingsTextfield.text floatValue];
     user.interestRate = [_interestRateTextfield.text floatValue];
+    
+    
 
-    int totalMonthsBeforeRetirement = (user.yearOfRetirement - 2016)*12;
+    int totalMonthsBeforeRetirement = ((user.yearOfRetirement - 2016)*12)-7;
 //    float monthlySavingsToAdd = user.totalIncome - user.totalExpenses;
     float compoundingInterestRate = ((user.interestRate)/100)/12;
 
@@ -64,9 +76,9 @@ User *user;
     
     NSLog(@"future value %.2f", futureValue);
     
-    NSString *future = [NSString stringWithFormat:@"%.2f",futureValue];
+    NSString *future = [NSString stringWithFormat:@"$ %.2f",futureValue];
     
-    _amountMoneyRequired.text = future;
+    _dollarEstimatedRetirementMoneyLabel.text = future;
     
     NSLog(@"year of retirement %i", user.yearOfRetirement);
     NSLog(@"total savings %.2f", user.totalSavings);
@@ -105,10 +117,23 @@ User *user;
     NSLog(@"dollarTotalIncomePlaceholder.text %@ \n", sourceVC2.dollarTotalIncomeLabel.text);
     
 }
+
+
+- (IBAction)unwindFromAdvisorViewController:(UIStoryboardSegue *)unwindFromAdvisorController {
+}
+
+
 - (IBAction)advisorButton:(id)sender {
     NSLog(@"Advisor Button Pressed");
 }
 
+
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    
+    return YES;
+}
 
 
 @end

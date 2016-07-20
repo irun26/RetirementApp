@@ -14,6 +14,9 @@
 @property float mortgage;
 @property float car;
 @property float food;
+@property float utilities;
+@property float insurance;
+@property float otherExpenses;
 @property float totalExpenses;
 
 - (float) calculateTotalExpense:(float) mortgage andCar:(float) car andFood:(float) food;
