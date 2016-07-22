@@ -36,10 +36,17 @@
 
 
 
+- (IBAction)callPhoneNumberButton:(id)sender {
+
+NSString *phNo = @"+15868797502";
+NSURL *phoneUrl = [NSURL URLWithString:[NSString  stringWithFormat:@"telprompt:%@",phNo]];
+
+    [[UIApplication sharedApplication] canOpenURL:phoneUrl];
+    [[UIApplication sharedApplication] openURL:phoneUrl];
+}
 
 - (IBAction)doneButton:(id)sender {
     NSLog(@"Done Button Pressed");
-
 }
 
 

@@ -34,6 +34,8 @@
 @property (weak, nonatomic) IBOutlet UILabel *estimatedRetirementMoneyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dollarEstimatedRetirementMoneyLabel;
 
+@property (weak, nonatomic) IBOutlet UILabel *willLastYearsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearsNoContribLabel;
 
 @property (weak, nonatomic) IBOutlet UILabel *withMonthlyContributionLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dollarEstimateWithContributionLabel;

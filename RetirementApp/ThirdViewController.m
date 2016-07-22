@@ -85,6 +85,12 @@ User *user;
     
     _dollarEstimatedRetirementMoneyLabel.text = futureValueString;
     
+    float taxes = 0.30;
+    float m = (futureValue - (futureValue * taxes))/(user.totalExpenses*12);
+    _yearsNoContribLabel.text = [NSString stringWithFormat:@"%.0f",m];
+    
+    
+    
     float difference = user.totalIncome - user.totalExpenses;
     NSLog(@"difference $ %.2f", difference);
     
@@ -95,7 +101,7 @@ User *user;
     NSLog(@"future value with Contrib $ %.2f", futureValueWithContrib);
     _dollarEstimateWithContributionLabel.text = futureValueWithContribString;
     
-    float taxes = 0.30;
+    
     float n = (futureValueWithContrib - (futureValueWithContrib * taxes))/(user.totalExpenses*12);
     
 //    float n = 1 / ( 12* log( 1 + (user.interestRate/12 ) ) );

@@ -16,4 +16,6 @@
 @property (weak, nonatomic) IBOutlet UILabel *phoneNumberLabel;
 @property (weak, nonatomic) IBOutlet UILabel *mapHereLabel;
 
+@property (weak, nonatomic) UIAlertController *calert;
+
 @end
