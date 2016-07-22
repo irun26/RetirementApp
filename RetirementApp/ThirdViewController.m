@@ -10,6 +10,8 @@
 #import "SecondViewController.h"
 #import "FirstViewController.h"
 #import "User.h"
+#import "Expenses.h"
+
 
 @interface ThirdViewController ()
 
@@ -17,11 +19,15 @@
 
 User *user;
 
+
 @implementation ThirdViewController
+
+
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
+  
+    user = [[User alloc] init];
     // Do any additional setup after loading the view.
 }
 
@@ -59,15 +65,14 @@ User *user;
 
 - (IBAction)calculateButton:(id)sender {
     
-    user = [[User alloc] init];
+    
     
     user.yearOfRetirement = [_retirementYearTextfield.text intValue];
     user.totalSavings = [_amountTotalSavingsTextfield.text floatValue];
     user.interestRate = [_interestRateTextfield.text floatValue];
     
+    int totalMonthsBeforeRetirement = ((user.yearOfRetirement - [user getTheCurrentYear])*12)-[user getTheCurrentMonth];
     
-
-    int totalMonthsBeforeRetirement = ((user.yearOfRetirement - 2016)*12)-7;
 //    float monthlySavingsToAdd = user.totalIncome - user.totalExpenses;
     float compoundingInterestRate = ((user.interestRate)/100)/12;
 
@@ -76,45 +81,78 @@ User *user;
     
     NSLog(@"future value %.2f", futureValue);
     
-    NSString *future = [NSString stringWithFormat:@"$ %.2f",futureValue];
+    NSString *futureValueString = [NSString stringWithFormat:@"$ %.2f",futureValue];
     
-    _dollarEstimatedRetirementMoneyLabel.text = future;
+    _dollarEstimatedRetirementMoneyLabel.text = futureValueString;
     
-    NSLog(@"year of retirement %i", user.yearOfRetirement);
-    NSLog(@"total savings %.2f", user.totalSavings);
-    NSLog(@"interest rate %.2f", user.interestRate);
+    float difference = user.totalIncome - user.totalExpenses;
+    NSLog(@"difference $ %.2f", difference);
     
-    NSLog(@"Calculate Button Pressed");
-}
-
-//-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender{
-//
-//    FirstViewController *destVC = [segue destinationViewController];
+    float futureValueWithContrib = futureValue + difference * ((pow((1.0 + compoundingInterestRate), totalMonthsBeforeRetirement) - 1)/(compoundingInterestRate));
+    
+    NSString *futureValueWithContribString = [NSString stringWithFormat:@"$ %.2f",futureValueWithContrib];
+    
+    NSLog(@"future value with Contrib $ %.2f", futureValueWithContrib);
+    _dollarEstimateWithContributionLabel.text = futureValueWithContribString;
+    
+    float taxes = 0.30;
+    float n = (futureValueWithContrib - (futureValueWithContrib * taxes))/(user.totalExpenses*12);
+    
+//    float n = 1 / ( 12* log( 1 + (user.interestRate/12 ) ) );
+    
+    _yearsEstimateLabel.text = [NSString stringWithFormat:@"%.0f", n];
+    
+    NSLog(@" n value %.0f", n);
+    
+    
+    
+    
+    
+ 
+//    Use these NSLog lines to test user inputs.
 //    
-//}
+//    NSLog(@"year of retirement %i", user.yearOfRetirement);
+//    NSLog(@"total savings %.2f", user.totalSavings);
+//    NSLog(@"interest rate %.2f", user.interestRate);
+//    
+//    NSLog(@"Calculate Button Pressed");
+}
 
 -(IBAction)unwindForSegue:(UIStoryboardSegue *)unwindSegue{
 
     FirstViewController *sourceVC = [unwindSegue sourceViewController];
-   user.totalExpenses = [sourceVC.dollarTotalExpensesLabel.text floatValue];
     
-    _dollarTotalExpensesPlaceholder.text = sourceVC.dollarTotalExpensesLabel.text;
     
+    NSString *str = sourceVC.dollarTotalExpensesLabel.text;
+
+    _dollarTotalExpensesPlaceholder.text = str;
+    
+    //    NSLog(@"dolar %@", sourceVC.dollarTotalExpensesLabel.text);
+    
+//    float totalExpenseFloatValue = [sourceVC.dollarTotalExpensesLabel.text floatValue];
+//    NSLog(@"TotalExpenseFloat %f", totalExpenseFloatValue);
+
+    user.totalExpenses = [sourceVC.passedExpensesString floatValue];
     NSLog(@"user.totalExpenses float value %.2f \n", user.totalExpenses);
-    NSLog(@"user.totalExpenses float value %.2f \n", [sourceVC.dollarTotalExpensesLabel.text floatValue]);
-    NSLog(@"dollarTotalExpensesPlaceholder.text %@ \n", sourceVC.dollarTotalExpensesLabel.text);
+    
+    
+//    NSLog(@"sourceVC.dollarTotalExpensesLabel float value %.2f \n", [sourceVC.dollarTotalExpensesLabel.text floatValue]);
+    
 
 }
 -(IBAction)unwindForSegue2:(UIStoryboardSegue *)unwindSegue2{
     
     SecondViewController *sourceVC2 = [unwindSegue2 sourceViewController];
-    user.totalIncome = [sourceVC2.dollarTotalIncomeLabel.text floatValue];
+    
     
     _dollarTotalIncomePlaceholder.text = sourceVC2.dollarTotalIncomeLabel.text;
     
+    
+    user.totalIncome = [sourceVC2.passedIncomeString floatValue];
+    
     NSLog(@"user.totalIncome float value %.2f \n", user.totalIncome);
-    NSLog(@"user.totalIncome float value %.2f \n", [sourceVC2.dollarTotalIncomeLabel.text floatValue]);
-    NSLog(@"dollarTotalIncomePlaceholder.text %@ \n", sourceVC2.dollarTotalIncomeLabel.text);
+//    NSLog(@"user.totalIncome float value %.2f \n", [sourceVC2.dollarTotalIncomeLabel.text floatValue]);
+//    NSLog(@"dollarTotalIncomePlaceholder.text %@ \n", sourceVC2.dollarTotalIncomeLabel.text);
     
 }
 

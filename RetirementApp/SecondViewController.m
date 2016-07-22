@@ -28,16 +28,6 @@ Income *income;
     // Dispose of any resources that can be recreated.
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
     for (UIView * txt in self.view.subviews){
         if ([txt isKindOfClass:[UITextField class]] && [txt isFirstResponder]) {
@@ -57,10 +47,8 @@ Income *income;
     income.totalIncome = income.mainIncome + income.spouseIncome + income.otherIncome;
     
     NSString *str = [NSString stringWithFormat:@"$ %.2f", income.totalIncome];
-    
     _dollarTotalIncomeLabel.text = str;
-    
-    
+    _passedIncomeString = [NSString stringWithFormat:@"%.2f", income.totalIncome];
     
     
     NSLog(@"Main Income = $%.2f", income.mainIncome);
@@ -68,22 +56,8 @@ Income *income;
     NSLog(@"Other Income = $%.2f", income.otherIncome);
     NSLog(@"Total Income = $%.2f", income.totalIncome);
     
-  
-    
-    
-    
-    
-    
-    
-    
-    
-    
 //    NSLog(@"Income Submit Button Pressed");
-    
-    
-    
-    
-    
+
 }
 
 @end

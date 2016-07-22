@@ -330,35 +330,49 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Interest Rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7lT-bA-s9E">
-                                <rect key="frame" x="20" y="281" width="117" height="21"/>
+                                <rect key="frame" x="20" y="240" width="117" height="21"/>
                                 <color key="backgroundColor" red="1" green="0.65503255699999996" blue="0.56953729269999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Estimated Retirement Money" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x71-X4-0Tj">
-                                <rect key="frame" x="20" y="371" width="247" height="21"/>
+                                <rect key="frame" x="20" y="325" width="247" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.65503255699999996" blue="0.56953729269999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="With Monthly Contribution" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Rg-9f-Hq9">
+                                <rect key="frame" x="20" y="393" width="227" height="21"/>
+                                <color key="backgroundColor" red="1" green="0.65503255699999996" blue="0.56953729269999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Will Last (in Years)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zTm-Cx-w7m">
+                                <rect key="frame" x="20" y="451" width="166" height="21"/>
                                 <color key="backgroundColor" red="1" green="0.65503255699999996" blue="0.56953729269999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Total Savings" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PEC-Pw-y4R">
-                                <rect key="frame" x="20" y="228" width="117" height="21"/>
+                                <rect key="frame" x="20" y="201" width="117" height="21"/>
                                 <color key="backgroundColor" red="1" green="0.65503255699999996" blue="0.56953729269999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Estimated Retirement Year" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Owa-SG-yxN">
-                                <rect key="frame" x="20" y="178" width="182" height="21"/>
+                                <rect key="frame" x="20" y="165" width="182" height="21"/>
                                 <color key="backgroundColor" red="1" green="0.65503255699999996" blue="0.56953729269999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lgw-9g-L54">
-                                <rect key="frame" x="20" y="510" width="78" height="30"/>
+                                <rect key="frame" x="20" y="525" width="78" height="30"/>
                                 <color key="backgroundColor" red="0.64291607049999999" green="0.94101050900000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Advisor"/>
@@ -378,7 +392,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CUU-Zf-ZNo">
-                                <rect key="frame" x="20" y="126" width="83" height="30"/>
+                                <rect key="frame" x="20" y="116" width="83" height="30"/>
                                 <color key="backgroundColor" red="0.70524358139999999" green="1" blue="0.41348594970000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Income"/>
@@ -388,17 +402,17 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Year" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4ax-ye-BUE">
-                                <rect key="frame" x="222" y="174" width="78" height="30"/>
+                                <rect key="frame" x="222" y="161" width="78" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="% Interest Rate" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="DA5-Hl-GkL">
-                                <rect key="frame" x="155" y="276" width="145" height="30"/>
+                                <rect key="frame" x="155" y="236" width="145" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BM1-qn-zTD">
-                                <rect key="frame" x="209" y="324" width="91" height="30"/>
+                                <rect key="frame" x="209" y="274" width="91" height="30"/>
                                 <color key="backgroundColor" red="0.70524358139999999" green="1" blue="0.41348594970000002" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Calculate"/>
@@ -413,18 +427,32 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="$ Total Income" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="oNJ-5V-p5j">
-                                <rect key="frame" x="186" y="130" width="114" height="21"/>
+                                <rect key="frame" x="186" y="120" width="114" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="$ Enter Total Savings" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="lCf-tF-fBc">
-                                <rect key="frame" x="145" y="224" width="155" height="30"/>
+                                <rect key="frame" x="145" y="197" width="155" height="30"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <textInputTraits key="textInputTraits" keyboardType="numbersAndPunctuation"/>
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="$ Estimate" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xu4-3x-JBq">
-                                <rect key="frame" x="165" y="411" width="135" height="21"/>
+                                <rect key="frame" x="165" y="354" width="135" height="21"/>
+                                <color key="backgroundColor" red="0.95658040830000002" green="1" blue="0.58938783260000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="$ Estimate 2" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GVp-rk-1iI">
+                                <rect key="frame" x="165" y="422" width="135" height="23"/>
+                                <color key="backgroundColor" red="0.95658040830000002" green="1" blue="0.58938783260000005" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Years" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2sZ-xz-ZSw">
+                                <rect key="frame" x="165" y="475" width="135" height="23"/>
                                 <color key="backgroundColor" red="0.95658040830000002" green="1" blue="0.58938783260000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="19"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -464,6 +492,7 @@
                     <navigationItem key="navigationItem" id="Vqw-Ko-0vK"/>
                     <connections>
                         <outlet property="amountTotalSavingsTextfield" destination="lCf-tF-fBc" id="qsv-jl-E3h"/>
+                        <outlet property="dollarEstimateWithContributionLabel" destination="GVp-rk-1iI" id="4Ik-aX-RQA"/>
                         <outlet property="dollarEstimatedRetirementMoneyLabel" destination="xu4-3x-JBq" id="7s7-FP-g2W"/>
                         <outlet property="dollarTotalExpensesPlaceholder" destination="tzs-Fd-6Nw" id="coc-mH-nZB"/>
                         <outlet property="dollarTotalIncomePlaceholder" destination="oNJ-5V-p5j" id="aCY-05-I1y"/>
@@ -473,6 +502,9 @@
                         <outlet property="interestRateTextfield" destination="DA5-Hl-GkL" id="h6i-b6-w2p"/>
                         <outlet property="retirementYearTextfield" destination="4ax-ye-BUE" id="Svd-DM-Et8"/>
                         <outlet property="totalSavingsLabel" destination="PEC-Pw-y4R" id="9Xl-dT-Wlx"/>
+                        <outlet property="willLastInYearsLabel" destination="zTm-Cx-w7m" id="j6a-SI-qyJ"/>
+                        <outlet property="withMonthlyContributionLabel" destination="3Rg-9f-Hq9" id="ljN-Tr-bib"/>
+                        <outlet property="yearsEstimateLabel" destination="2sZ-xz-ZSw" id="PuD-6j-zxY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kh8-8f-LB2" userLabel="First Responder" sceneMemberID="firstResponder"/>

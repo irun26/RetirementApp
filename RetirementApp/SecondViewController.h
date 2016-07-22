@@ -35,7 +35,7 @@
 @property (weak, nonatomic) IBOutlet UILabel *dollarTotalIncomeLabel;
 
 
-
+@property (weak, nonatomic) NSString *passedIncomeString;
 
 
 

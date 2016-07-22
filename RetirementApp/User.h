@@ -7,11 +7,10 @@
 //
 
 #import <Foundation/Foundation.h>
+//#import "Expenses.h"
+
 
 @interface User : NSObject
-
-
-
 
 @property int yearOfRetirement;
 @property float totalSavings;
@@ -19,7 +18,9 @@
 @property float totalIncome;
 @property float interestRate;
 @property float totalMoneyRequired;
+//@property (strong, nonatomic) Expenses *userExpenses;
 
-
+- (int)getTheCurrentMonth;
+- (int)getTheCurrentYear;
 
 @end

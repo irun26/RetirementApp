@@ -20,10 +20,8 @@
 @property (weak, nonatomic) IBOutlet UITextField *amountTotalSavingsTextfield;
 
 
-
 @property (weak, nonatomic) IBOutlet UILabel *dollarTotalExpensesPlaceholder
 ;
-
 
 
 @property (weak, nonatomic) IBOutlet UILabel *dollarTotalIncomePlaceholder;
@@ -33,12 +31,21 @@
 @property (weak, nonatomic) IBOutlet UITextField *interestRateTextfield;
 
 
-
 @property (weak, nonatomic) IBOutlet UILabel *estimatedRetirementMoneyLabel;
 @property (weak, nonatomic) IBOutlet UILabel *dollarEstimatedRetirementMoneyLabel;
 
 
+@property (weak, nonatomic) IBOutlet UILabel *withMonthlyContributionLabel;
+@property (weak, nonatomic) IBOutlet UILabel *dollarEstimateWithContributionLabel;
+
+
+@property (weak, nonatomic) IBOutlet UILabel *willLastInYearsLabel;
+@property (weak, nonatomic) IBOutlet UILabel *yearsEstimateLabel;
+
+
 - (void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event;
+
+
 
 
 @end
